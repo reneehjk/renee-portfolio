@@ -2,7 +2,7 @@ import MarketingBlock from "../components/MaketingBlock";
 
 function Marketing () {
     return (
-        <div className="h-[90vh] mt-[50px] max-w-[90%] mx-auto lg:space-x-0">
+        <div className="h-[90vh] mt-[50px] max-w-[90%] mx-auto lg:space-x-0 min-h-[80vh]">
             <h1 className="text-brown text-4xl font-raleway font-medium my-[50px]">marketing</h1>
             <MarketingBlock 
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGFOfznCjxcFb93cLMlXZiP9UK9JmBitho2Q&s"

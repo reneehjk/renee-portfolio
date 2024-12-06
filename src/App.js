@@ -7,6 +7,7 @@ import { DesPortfolio } from "./pages/Portfolio";
 import { AllPortfolio } from "./pages/Portfolio";
 import About from "./pages/About";
 import Marketing from "./pages/Marketing";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             </Routes>
           </div>
         </div>
+        <Contact />
       </div>
     </Router>
   );
