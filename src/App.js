@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="select-none bg-gradient-to-r from-white to-lightBeige min-h-screen">
+      <div className="select-none bg-gradient-to-r from-white to-lightBeige min-h-screen space-y-10">
         <div className="flex lg:flex-row flex-col justify-start">
           <div className="flex justify-center">
             <NavBar />

@@ -62,9 +62,9 @@ function About () {
         <div className="flex lg:flex-row font-raleway mt-[50px] justify-between flex-col-reverse items-center max-w-[90%] mx-auto lg:space-x-20">
             <div className="flex lg:max-w-[40%]">
                 <div className="flex flex-col lg:text-left text-center lg:items-start items-center">
-                    <div className="text-brown text-lg mb-3 lg:mt-5 mt-5">website developer, digital marketer, product manager and AI enthusiast</div>
-                    <div className="text-darkBrown font-semibold text-4xl mb-6 justify-self-start text-left">about Renee Kim</div>
-                    <div className="flex lg:flex-col md:flex-row flex-col text-brown text-xl lg:space-y-3 sm:space-y-2 justify-between mb-5" >
+                    <div className="text-brown lg:text-lg text-base mb-3 lg:mt-5 mt-5">website developer, digital marketer, product manager and AI enthusiast</div>
+                    <div className="text-darkBrown font-semibold lg:text-4xl text-3xl mb-6 justify-self-start text-left">about Renee Kim</div>
+                    <div className="flex lg:flex-col md:flex-row flex-col text-brown lg:text-xl text-lg lg:space-y-3 sm:space-y-2 justify-between mb-5" >
                         <div className="lg:min-w-[100%] md:max-w-[45%] w-[100%]">Renee is a current third year student at Queen’s University majoring in Computer Science with a focus in AI. She has a passion for project management, web development and design. She also enjoys digital marketing as well as keeping up with the latest in Artificial Intelligence.</div>
                         <div className="lg:min-w-[100%] md:max-w-[45%] w-[100%]">In her free time, she enjoys dancing, figure skating, skiing, anime, video games, digital marketing, designing websites and reading!</div>
                     </div>
@@ -77,13 +77,13 @@ function About () {
                 className="lg:w-[50%] md:w-[60%] w-[90%] aspect-square rounded-3xl shadow-xl self-center"
                 alt="Renee"
                 ></img>
-                <h1 className="text-darkBrown font-semibold text-3xl mt-10">
+                <h1 className="text-darkBrown font-semibold lg:text-3xl text-2xl mt-10">
                 her proficiencies
                 </h1>
                 <div className="flex lg:flex-row flex-col justify-between mt-5 lg:space-x-8">
                 {categories.map((category, index) => (
                     <div key={index} className="lg:max-w-[30%]">
-                    <div className="text-brown font-medium text-lg mb-2">
+                    <div className="text-brown font-medium lg:text-lg text-base mb-2">
                         {category.title.toLowerCase()}
                     </div>
                     {category.skills.map((skill, idx) => (

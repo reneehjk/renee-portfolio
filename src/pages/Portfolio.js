@@ -90,7 +90,7 @@ const reversedPortfolioItems = [...portfolioItems].reverse();
 function Portfolio({ title, data }) {
     return (
         <div className="space-y-10 max-w-[90%] mx-auto lg:space-x-0">
-            <h1 className="text-brown text-4xl font-raleway font-medium mb-4 mt-[50px]">{title}</h1>
+            <h1 className="text-brown lg:text-4xl text-3xl font-raleway font-medium mb-4 mt-[50px]">{title}</h1>
             {data.map((item, index) => (
                 <PortfolioBlock
                     key={index}
