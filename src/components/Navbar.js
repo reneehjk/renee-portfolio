@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 
 function NavBar() {
   return (
-    <div className="flex flex-col items-center min-w-[220px] mt-10 lg:mx-[50px] lg:space-y-5 space-y-3 lg:fixed">
+    <div className="flex flex-col items-center min-w-[220px] mt-10 lg:space-y-5 space-y-3 lg:fixed">
       <img src={logo} alt="Logo"  className="lg:h-[130px] h-[70px]"/>
       <div className="flex flex-col font-raleway font-medium lg:mt-5 text-darkBeige lg:text-3xl text-2xl text-center lg:space-y-5 space-y-3">
         <NavLink
