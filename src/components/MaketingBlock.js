@@ -1,6 +1,35 @@
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
 function MarketingBlock({ image, title, description, brandImage, instagramLink, tiktokLink, linkedInLink }) {
+    const [isVisible, setIsVisible] = useState(false);
+    const elementRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              observer.disconnect(); // Stop observing after the first animation
+            }
+          },
+          { threshold: 0.1 }
+        );
+    
+        if (elementRef.current) {
+          observer.observe(elementRef.current);
+        }
+    
+        return () => observer.disconnect();
+      }, []);
+
     return (
-        <div className="flex lg:flex-row flex-col bg-white p-6 shadow-md space-x-4 items-center font-raleway justify-between max-w-7xl">
+        <motion.div
+      ref={elementRef}
+      initial={{ opacity: 0, y: 50 }} // Starting state
+      animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animation when visible
+      transition={{ duration: 0.8 }} // Animation duration
+       className="flex lg:flex-row flex-col bg-white p-6 shadow-md space-x-4 items-center font-raleway justify-between max-w-7xl">
             {/* Image */}
             <img
                 src={image}
@@ -37,7 +66,7 @@ function MarketingBlock({ image, title, description, brandImage, instagramLink, 
                     </div>
                 </div>
             </div>
-        </div>
+            </motion.div>
     );
 }
 
