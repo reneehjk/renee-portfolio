@@ -1,6 +1,7 @@
 import me from "../assets/me (2).jpg"
 import resume from "../assets/resume.pdf"
-
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const categories = [
     {
@@ -58,8 +59,33 @@ const categories = [
   
 
 function About () {
+    const [isVisible, setIsVisible] = useState(false);
+    const elementRef = useRef(null);
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              observer.disconnect(); // Stop observing after the first animation
+            }
+          },
+          { threshold: 0.1 }
+        );
+    
+        if (elementRef.current) {
+          observer.observe(elementRef.current);
+        }
+    
+        return () => observer.disconnect();
+      }, []);
+
     return (
-        <div className="flex lg:flex-row font-raleway mt-[50px] justify-between flex-col-reverse items-center max-w-[90%] mx-auto lg:space-x-20">
+        <motion.div
+        ref={elementRef}
+        initial={{ opacity: 0, y: 50 }} // Starting state
+        animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animation when visible
+        transition={{ duration: 0.5 }} // Animation duration
+        className="flex lg:flex-row font-raleway mt-[50px] justify-between flex-col-reverse items-center max-w-[90%] mx-auto lg:space-x-20">
             <div className="flex lg:max-w-[40%]">
                 <div className="flex flex-col lg:text-left text-center lg:items-start items-center">
                     <div className="text-brown lg:text-lg text-base mb-3 lg:mt-5 mt-5">website developer, digital marketer, product manager and AI enthusiast</div>
@@ -71,7 +97,12 @@ function About () {
                     <a href={resume} download className="underline drop-shadow-sm text-darkBrown hover:text-brown">download her resume</a>
                 </div>
             </div>
-            <div className="flex flex-col justify-end bg-white w-full h-full p-12 shadow-xl lg:w-[60%] lg:max-w-4xl lg:mt-0 m-5 lg:mr-0">
+            <motion.div
+            ref={elementRef}
+            initial={{ opacity: 0, y: 50 }} // Starting state
+            animate={isVisible ? { opacity: 1, y: 0 } : {}} // Animation when visible
+            transition={{ duration: 0.8 }} // Animation duration
+            className="flex flex-col justify-end bg-white w-full h-full p-12 shadow-xl lg:w-[60%] lg:max-w-4xl lg:mt-0 m-5 lg:mr-0">
                 <img
                 src={me}
                 className="lg:w-[50%] md:w-[60%] w-[90%] aspect-square rounded-3xl shadow-xl self-center"
@@ -92,8 +123,8 @@ function About () {
                     </div>
                 ))}
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
     

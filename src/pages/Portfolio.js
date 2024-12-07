@@ -32,7 +32,7 @@ const portfolioItems = [
     {
         name: "Lovelace Logs",
         description: "A resource to empower women in STEM. Created during EmpowHER hacks and received an honorable mention.",
-        techStack: "React.js, Tailwind CSS",
+        techStack: "React.js, Tailwind CSS, Canva",
         codeLink: "https://github.com/reneehjk/lovelace-logs",
         projectLink: "https://reneehjk.github.io/lovelace-logs/",
         category: ["wd", "dp"],
@@ -41,7 +41,7 @@ const portfolioItems = [
     {
         name: "RoomieMatch",
         description: "Project created at WaffleHacks to help people connect with new roommates. Only frontend work had been done.",
-        techStack: "React.js, CSS",
+        techStack: "React.js, CSS, Canva",
         codeLink: "https://github.com/reneehjk/roomie-match",
         projectLink: "https://reneehjk.github.io/roomie-match/",
         category: ["wd", "dp"],
@@ -75,7 +75,7 @@ const portfolioItems = [
     {
         name: "Helping Brains Heal",
         description: "A website created for the HBH foundation that donates care packages to concussion survivors.",
-        techStack: "React.js, Tailwind CSS, Sanity",
+        techStack: "React.js, Tailwind CSS, Sanity, Figma",
         codeLink: "https://github.com/reneehjk/helping-brains-heal",
         projectLink: "https://www.helpingbrainsheal.ca/",
         category: ["wd", "pm", "dp"],
