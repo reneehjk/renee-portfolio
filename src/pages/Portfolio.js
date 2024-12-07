@@ -81,6 +81,15 @@ const portfolioItems = [
         category: ["wd", "pm", "dp"],
         image: "https://www.helpingbrainsheal.ca/assets/helpingBrainsHeal-hZiIvZ4A.svg"
     },
+    {
+        name: "Renee's Portfolio",
+        description: "A website created for to show the projects from Renee's portfolio.",
+        techStack: "React.js, Tailwind CSS, Figma",
+        codeLink: "https://github.com/reneehjk/renee-portfolio",
+        projectLink: "https://renee-portfolio-beryl.vercel.app/",
+        category: ["wd", "dp"],
+        image: "https://renee-portfolio-beryl.vercel.app/static/media/logo.c007bdf6e3941c3b87dad8869f6541aa.svg"
+    },
     
 ];
 
